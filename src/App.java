@@ -1,3 +1,4 @@
+import MusicPlayer.managers.AudioBookManager;
 import MusicPlayer.managers.MusicManager;
 import MusicPlayer.managers.VideoManager;
 import MusicPlayer.managers.PodcastManager;
@@ -5,8 +6,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         //executeMusicExamples();
         //executeVideoExamples();
-        executePodcastExamples();
-
+        //executePodcastExamples();
+        //executeAudioBookExamples();
     }
 
     public static void executeMusicExamples(){
@@ -101,6 +102,41 @@ public class App {
         podcastManager.getPlayingPodcast().play();
         podcastManager.getNextPodcast().play();
         podcastManager.getPreviousPodcast().play();
+
+    }
+
+    public static void executeAudioBookExamples(){
+        AudioBookManager audioBookManager = new AudioBookManager();
+
+        audioBookManager.getAllAudioBooks();
+        audioBookManager.getPlayingAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getPreviousAudioBook().play();
+        audioBookManager.getPreviousAudioBook().play();
+        audioBookManager.getPlayingAudioBook().stop();
+        audioBookManager.getPlayingAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+
+        audioBookManager.getAudioBooksByRate(5);
+        audioBookManager.getPlayingAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+
+        audioBookManager.getAudioBooksByRate(4);
+        audioBookManager.getPlayingAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+        audioBookManager.getNextAudioBook().play();
+
+        audioBookManager.getAudioBooksByWriter("J.R.R. Tolkien");
+        audioBookManager.getPlayingAudioBook().play();
+
+        audioBookManager.orderAudioBooksByRate();
+        audioBookManager.getPlayingAudioBook().play();
+        audioBookManager.getPlayingAudioBook().stop();
 
     }
 }
