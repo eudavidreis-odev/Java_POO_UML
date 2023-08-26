@@ -1,20 +1,15 @@
 package MusicPlayer.managers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import MusicPlayer.enums.EnumVideoExampleData;
-import MusicPlayer.objects.Music;
 import MusicPlayer.objects.Video;
 
 /**
- * O VideoManager é o gerenciador responsável pelos vídeos (representadas pelo objeto Video). Ele oferece diversos métodos para trabalhar com os vídeos.
+ * O VideoManager é o gerenciador responsável pelos vídeos (representados pelo objeto Video). Ele oferece diversos métodos para trabalhar com os vídeos.
  * @see Video
  */
 public class VideoManager {
@@ -77,7 +72,7 @@ public class VideoManager {
 
         /**
          * Retorna o vídeo anterior, com base na playlist atual.
-         * @return Music
+         * @return Video
          */
         public Video getPreviousVideo(){
             Video tempVideo = playlist.stream().filter(m -> m.getId() == videoId).toList().get(0);
@@ -117,7 +112,7 @@ public class VideoManager {
 
         /**
          * Configura os videos disponíveis.
-         * @param videos Musícas encontradas no díspositivo.
+         * @param videos Vídeos encontradas no díspositivo.
          */
         public void setVideos(List<Video> videos) {
             this.videos = videos;
@@ -125,7 +120,7 @@ public class VideoManager {
         /**
          * Retorna uma lista de vídeos com um determminado enrate.
          * @param rate int Número que representa o enrate a ser procurado.
-         * @return List Retorna uma List<Music> com as músicas.
+         * @return List Retorna uma List<Video> com os vídeos.
          */
         public List<Video> getVideosByRate(int rate){
             setPlaylist(videos.stream().filter(m -> m.getRate() == rate).toList());
@@ -136,7 +131,7 @@ public class VideoManager {
 
         /**
          * Ordena vídeos com base na avaliação, e retorna uma lista.
-         * @return List List<Music> ordenado por enrate.
+         * @return List List<Video> ordenado por enrate.
          */
         public List<Video> orderVideosByRate(){
             List<Video> ordenedVideos = videos;
