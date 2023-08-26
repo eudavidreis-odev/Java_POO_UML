@@ -1,4 +1,4 @@
-# Bootcamp DIO - JAVA + AWS (UML e Java POO)- Funcionalidades do iPhone
+# Bootcamp DIO - JAVA + AWS (UML e Java POO) - Funcionalidades do iPhone
 
 Bem-vindo ao repositório do projeto desenvolvido durante o Bootcamp DIO - JAVA + AWS (UML-Diagrama de Classe) e Java POO da empresa DIO (Digital Innovation One). Neste projeto, exploramos os conceitos de Modelagem de Classes com UML e Programação Orientada a Objetos (POO) em Java, com foco na criação das funcionalidades de um iPhone.
 
@@ -6,7 +6,7 @@ Bem-vindo ao repositório do projeto desenvolvido durante o Bootcamp DIO - JAVA 
 
 O objetivo deste projeto é criar uma representação em Java das principais funcionalidades de um iPhone. As funcionalidades que serão implementadas incluem:
 
-1. **Tocador de Música:** Implementação de um tocador de música que permitirá reproduzir, pausar, avançar e retroceder faixas. Será possível também ordenar e filtrar as músicas por nome, artista e album.
+1. **Tocador de Música:** Implementação de um tocador de música que permitirá reproduzir, pausar, avançar e retroceder faixas. Será possível também ordenar e filtrar as músicas por nome, artista e álbum.
 
 2. **Navegador Web:** Desenvolvimento de um navegador web simplificado que possibilitará a abertura de URLs. O navegador terá a capacidade de exibir páginas da web e navegar entre elas.
 
@@ -26,28 +26,30 @@ Durante o bootcamp, aprendemos e aplicamos os seguintes conceitos e tecnologias:
 
 Para utilizar este projeto, siga os passos abaixo:
 
-1. Instale o Java 8 apartir deste site da [Oracle](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html).
+1. Instale o Java 8 a partir deste [site da Oracle](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html).
 
 2. Clone este repositório para o seu ambiente local usando o comando:
 
-3. https://github.com/EuDavidReis-ODev/Java_POO_UML.git
+```bash
+git clone https://github.com/EuDavidReis-ODev/Java_POO_UML.git
+```
+3. Abra o projeto em sua IDE Java preferida (Eclipse, IntelliJ, etc.).
 
-4. Abra o projeto em sua IDE Java preferida (Eclipse, IntelliJ, etc.).
+4. Navegue até a classe principal do projeto, geralmente chamada de `Main` ou similar.
 
-5. Navegue até a classe principal do projeto, geralmente chamada de `Main` ou similar.
-
-6. Execute a aplicação e utilize os manager disponíveis para interagir com as diferentes funcionalidades do iPhone simulado.
+5. Execute a aplicação e utilize os managers disponíveis para interagir com as diferentes funcionalidades do iPhone simulado.
 
 ## Contribuição
 
 Este projeto foi desenvolvido como parte do bootcamp da DIO e não tem fins educativos. Se você gostaria de contribuir com melhorias, correções ou novas funcionalidades, sinta-se à vontade para enviar um pull request. Será um prazer receber contribuições da comunidade!
 
-### Sugestão de atualização
-Refatore o projeto extraindo para uma interface, os metódos semelhantes dos managers.
+### Sugestão de Atualização
+
+Refatore o projeto extraindo para uma interface os métodos semelhantes dos managers.
 
 ## Créditos
 
-Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS, o projeto aborda as aulas sobre UML e Java POO da DIO.
+Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS. O projeto aborda as aulas sobre UML e Java POO da DIO.
 
 ## Contato
 
@@ -55,4 +57,4 @@ Se você tiver alguma dúvida ou quiser entrar em contato, você pode me encontr
 
 ---
 
-Espero que este projeto seja uma oportunidade de aprender e aplicar conceitos valiosos de UML e Java POO, além de se divertir criando as funcionalidades de um iPhone em Java. Aproveite e bons estudos! 🚀
+Espero que este projeto seja uma oportunidade para aprender e aplicar conceitos valiosos de UML e Java POO, além de se divertir criando as funcionalidades de um iPhone em Java. Aproveite e bons estudos! 🚀
