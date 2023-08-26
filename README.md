@@ -26,7 +26,7 @@ Durante o bootcamp, aprendemos e aplicamos os seguintes conceitos e tecnologias:
 
 Para utilizar este projeto, siga os passos abaixo:
 
-1. Instale o Java 8 apartir deste site da [Oracle]([(https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html]).
+1. Instale o Java 8 apartir deste site da [Oracle](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html).
 
 2. Clone este repositório para o seu ambiente local usando o comando:
 
