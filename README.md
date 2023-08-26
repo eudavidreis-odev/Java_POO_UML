@@ -52,8 +52,10 @@ Refatore o projeto extraindo para uma interface os métodos semelhantes dos mana
 Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS. O projeto aborda as aulas sobre UML e Java POO da DIO.
 
 ## Contato
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-lightblue?style=for-the-badge)](https://www.linkedin.com/in/eudavidreis-dev/) [![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://www.facebook.com/eudavidreis.dev)
+[![Site](https://img.shields.io/badge/Site-green?style=for-the-badge)](https://www.mrdev.tec.br)
 
-Se você tiver alguma dúvida ou quiser entrar em contato, você pode me encontrar no seguinte endereço de e-mail: eudavidreis.dev@gmail.com
+Ou através do meu email: eudavidreis.dev@gmail.com
 
 ---
 
