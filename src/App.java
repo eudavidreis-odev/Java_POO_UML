@@ -1,10 +1,11 @@
 import MusicPlayer.managers.MusicManager;
 import MusicPlayer.managers.VideoManager;
-
+import MusicPlayer.managers.PodcastManager;
 public class App {
     public static void main(String[] args) throws Exception {
         //executeMusicExamples();
         //executeVideoExamples();
+        executePodcastExamples();
 
     }
 
@@ -85,6 +86,21 @@ public class App {
         videoManager.getPreviousVideo().play();
         videoManager.getPlayingVideo().stop();
 
+
+    }
+
+    public static void executePodcastExamples(){
+        PodcastManager podcastManager = new PodcastManager();
+        podcastManager.getPlayingPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getNextPodcast().stop();
+        podcastManager.getPlayingPodcast().play();
+        podcastManager.getNextPodcast().play();
+        podcastManager.getPreviousPodcast().play();
 
     }
 }
