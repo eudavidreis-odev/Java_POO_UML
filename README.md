@@ -54,7 +54,6 @@ Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+
 ## Contato
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lightblue?style=for-the-badge)](https://www.linkedin.com/in/eudavidreis-dev/) [![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://www.facebook.com/eudavidreis.dev)
 [![Site](https://img.shields.io/badge/Site-green?style=for-the-badge)](https://www.mrdev.tec.br)
-
 Ou através do meu email: eudavidreis.dev@gmail.com
 
 ---
