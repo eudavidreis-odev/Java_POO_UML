@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Set;
 
 import MusicPlayer.enums.EnumVideoExampleData;
+import MusicPlayer.objects.Music;
 import MusicPlayer.objects.Video;
 
 /**
@@ -120,6 +121,35 @@ public class VideoManager {
          */
         public void setVideos(List<Video> videos) {
             this.videos = videos;
+        }
+        /**
+         * Retorna uma lista de vídeos com um determminado enrate.
+         * @param rate int Número que representa o enrate a ser procurado.
+         * @return List Retorna uma List<Music> com as músicas.
+         */
+        public List<Video> getVideosByRate(int rate){
+            setPlaylist(videos.stream().filter(m -> m.getRate() == rate).toList());
+            setVideoId(playlist.get(0).getId());
+            System.out.println("Retornando apenas vídeos de nota ".concat(String.valueOf(rate)));
+            return playlist;
+        }
+
+        /**
+         * Ordena vídeos com base na avaliação, e retorna uma lista.
+         * @return List List<Music> ordenado por enrate.
+         */
+        public List<Video> orderVideosByRate(){
+            List<Video> ordenedVideos = videos;
+            Collections.sort(ordenedVideos, new Comparator<Video>() {
+                @Override
+                public int compare(Video m1, Video m2) {
+                    return Integer.compare(m2.getRate(), m1.getRate());
+                }
+            });
+            setPlaylist(ordenedVideos);
+            setVideoId(playlist.get(0).getId());
+            System.out.println("Ordenando os vídeos com base na nota ");
+            return ordenedVideos;
         }
 
 

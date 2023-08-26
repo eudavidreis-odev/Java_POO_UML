@@ -4,7 +4,7 @@ import MusicPlayer.managers.VideoManager;
 public class App {
     public static void main(String[] args) throws Exception {
         //executeMusicExamples();
-        executeVideoExamples();
+        //executeVideoExamples();
 
     }
 
@@ -72,5 +72,19 @@ public class App {
         videoManager.getNextVideo().play();
         videoManager.getNextVideo().play();
         videoManager.getNextVideo().play();
+
+        videoManager.getVideosByRate(3);
+        videoManager.getPlayingVideo().play();
+
+        videoManager.orderVideosByRate();
+        videoManager.getPlayingVideo().play();
+        videoManager.getNextVideo().play();
+        videoManager.getNextVideo().play();
+        videoManager.getNextVideo().play();
+        videoManager.getPlayingVideo().stop();
+        videoManager.getPreviousVideo().play();
+        videoManager.getPlayingVideo().stop();
+
+
     }
 }
