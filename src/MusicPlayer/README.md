@@ -9,7 +9,8 @@ A base para todos os tipos de arquivos que o MusicPlayer executa é a interface 
 public interface Playable {
     void play();
     void stop();
-}```
+}
+```
 
 ## Tipos de Arquivos Executados pelo MusicPlayer
 
