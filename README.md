@@ -43,9 +43,6 @@ git clone https://github.com/EuDavidReis-ODev/Java_POO_UML.git
 
 Este projeto foi desenvolvido como parte do bootcamp da DIO e não tem fins educativos. Se você gostaria de contribuir com melhorias, correções ou novas funcionalidades, sinta-se à vontade para enviar um pull request. Será um prazer receber contribuições da comunidade!
 
-### Sugestão de Atualização
-
-Refatore o projeto extraindo para uma interface os métodos semelhantes dos managers.
 
 ## Créditos
 
