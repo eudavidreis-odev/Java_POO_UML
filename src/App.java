@@ -1,6 +1,16 @@
+import java.util.Date;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import MusicPlayer.managers.AudioBookManager;
 import MusicPlayer.managers.MusicManager;
 import MusicPlayer.managers.VideoManager;
+import PhoneApp.PhoneApp;
+import PhoneApp.objetos.Callable;
+import PhoneApp.objetos.Contact;
+import PhoneApp.objetos.VideoCall;
+import PhoneApp.objetos.VoiceCall;
+import PhoneApp.objetos.VoiceMail;
 import MusicPlayer.managers.PodcastManager;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -8,6 +18,7 @@ public class App {
         //executeVideoExamples();
         //executePodcastExamples();
         //executeAudioBookExamples();
+        //executeCallsExamples();
     }
 
     public static void executeMusicExamples(){
@@ -139,4 +150,89 @@ public class App {
         audioBookManager.getPlayingAudioBook().stop();
 
     }
+
+    public static void executeCallsExamples() throws InterruptedException{
+        PhoneApp phoneApp = new PhoneApp();
+
+        Contact myContact = new Contact("Meu contato","(12)99719-0932","Celular");
+        List<Contact> myContactList = phoneApp.getContacts();
+
+        
+        VoiceCall voiceCall1 = new VoiceCall(myContactList.get((int) (Math.random()* (myContactList.size()-1))),myContact,0, new Date());
+        phoneApp.getCallListener().addNewCall(voiceCall1);
+
+        
+        phoneApp.acceptCall();
+
+        phoneApp.endCall();
+
+        Callable lastCall = phoneApp.getCallHistory().get(0);
+        if(lastCall.getCaller().getName() == null)System.out.println("Quem ligou: "+lastCall.getCaller().getNumber());
+        else System.out.println("Quem ligou: "+lastCall.getCaller().getName());
+
+        if(lastCall.getCaller().getName() == null)System.out.println("Quem recebeu a ligação: "+lastCall.getRecipient().getNumber());
+        else System.out.println("Quem recebeu a ligação: "+lastCall.getRecipient().getName());
+
+        System.out.println("Duração: "+lastCall.getDuration()+"s Data: "+lastCall.getDate());
+
+
+
+        VideoCall videoCall1 = new VideoCall(myContact, myContactList.get((int) (Math.random()* (myContactList.size()-1))),0, new Date());
+        phoneApp.getCallListener().addNewCall(videoCall1);
+
+        phoneApp.startCall();
+
+        phoneApp.endCall();
+
+        lastCall = phoneApp.getCallHistory().get(1);
+        if(lastCall.getCaller().getName() == null)System.out.println("Quem ligou: "+lastCall.getCaller().getNumber());
+        else System.out.println("Quem ligou: "+videoCall1.getCaller().getName());
+
+        if(lastCall.getCaller().getName() == null)System.out.println("Quem recebeu a ligação: "+lastCall.getRecipient().getNumber());
+        else System.out.println("Quem recebeu a ligação: "+videoCall1.getRecipient().getName());
+
+        System.out.println("Duração: "+lastCall.getDuration()+"s Data: "+lastCall.getDate());
+            
+        System.out.println("===============================");
+        System.out.println("Exibindo histórico de chamadas:");
+
+        List<Callable> callHistory = phoneApp.getCallHistory();
+
+        callHistory.forEach(call ->{
+            System.out.println("-------------------------------");
+
+            if(call.getCaller().getName()!=null) System.out.println(call.getCaller().getName());
+            else System.out.println(call.getCaller().getNumber());
+
+            if(call.getRecipient().getName()!=null) System.out.println(call.getRecipient().getName());
+            else System.out.println(call.getRecipient().getNumber());
+            
+            
+            System.out.println("Data: "+call.getDate());
+            System.out.println("Duração: "+call.getDuration());
+            System.out.println("-------------------------------");
+
+        });
+        
+        List<VoiceMail> voiceMailsByNumber = phoneApp.getCallListener().getVoiceMailByNumber("(13)3647-4347");
+
+        if(voiceMailsByNumber.size()>0){
+            System.out.println("Existem "+voiceMailsByNumber.size()+" mensagens do número (13)3647-4347");
+
+            voiceMailsByNumber.forEach(voiceMail ->{
+                System.out.println("Número: "+voiceMail.getNumber()+" Mensagem: "+voiceMail.getVoiceMsg());
+            });
+        }
+
+        voiceMailsByNumber = phoneApp.getCallListener().getVoiceMailByNumber("(14)1100-2233");
+
+        if(voiceMailsByNumber.size()>0){
+            System.out.println("Existem "+voiceMailsByNumber.size()+" mensagens do número (14)1100-2233");
+
+            voiceMailsByNumber.forEach(voiceMail ->{
+                System.out.println("Número: "+voiceMail.getNumber()+" Mensagem: "+voiceMail.getVoiceMsg());
+            });
+        }else System.out.println("Não existem mensagens do número (14)1100-2233 na caixa postal.");
+    }
+
 }
