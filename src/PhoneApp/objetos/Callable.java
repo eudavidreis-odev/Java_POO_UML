@@ -4,6 +4,12 @@ import java.util.Date;
 
 import PhoneApp.interfaces.Call;
 
+    /**
+     * Callable implementa a interface Call, para depois VoiceCall e VideoCall, poderem herdar seus metódos. 
+     * @see Call 
+     * @see VoiceCall 
+     * @see VideoCall 
+     */
 public class Callable implements Call{
     private Contact caller;
     private Contact recipient;
@@ -15,6 +21,7 @@ public class Callable implements Call{
     final String MSG_START = "Ligando para ";
     final String MSG_ACCEPT = "Aceitando chamada de ";
     final String MSG_END =  "Encerrando a chamada";
+
 
     public Callable(){
         this.caller = null;

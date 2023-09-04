@@ -3,7 +3,11 @@ package PhoneApp.objetos;
 import java.util.Date;
 
 import PhoneApp.interfaces.Call;
-
+/**
+ * VideoCall se extende de Callable, tem como função representar uma ligação de voz.
+ * @see Callable
+ * @see Call
+ */
 public class VideoCall extends Callable{
 
     public VideoCall(Contact caller, Contact recipient, double duration, Date date) {

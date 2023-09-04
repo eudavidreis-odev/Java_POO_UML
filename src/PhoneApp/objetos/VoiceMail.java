@@ -1,5 +1,9 @@
 package PhoneApp.objetos;
 
+/**
+ * VoiceMail representa uma mensagem na caixa postal. 
+ * Com os atributos número = "number" e mensagem deixada = "voiceMsg".
+ */
 public class VoiceMail {
     private String number;
     private String voiceMsg;
@@ -23,7 +27,7 @@ public class VoiceMail {
         this.voiceMsg = voiceMsg;
     }
 
-    
+
 
     
 }

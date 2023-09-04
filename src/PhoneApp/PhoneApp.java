@@ -14,6 +14,10 @@ import PhoneApp.objetos.Contact;
 import PhoneApp.objetos.VideoCall;
 import PhoneApp.objetos.VoiceCall;
 
+/**
+ * PhoneApp é a aplicação/serviço responsável por gerenciar as funções de "Telefone", neste caso, ligação de voz, vídeo, e 
+ * serviço de caixa postal.
+ */
 public class PhoneApp {
     private List<Callable> callHistory;
     private List<Contact> contacts;
@@ -27,6 +31,11 @@ public class PhoneApp {
 
     }
 
+    /**
+     * Realiza uma chamada de voz, recebe o número a discar. 
+     * @param number String 
+     * @return void
+     */
     public void voiceCall(String number){
         Contact caller = new Contact("Meu contato", "(12)99719-0932","Celular");
         Contact recipient = new Contact(null, number,getPhoneType(number));
@@ -34,6 +43,11 @@ public class PhoneApp {
         callListener.addNewCall(call);
     }
 
+    /**
+     * Realiza uma chamada de vídeo, recebe o número a discar. 
+     * @param number String 
+     * @return void
+     */
     public void videoCall(String number){
         Contact caller = new Contact("Meu contato", "(12)99719-0932","Celular");
         Contact recipient = new Contact(null, number, getPhoneType(number));
@@ -41,6 +55,12 @@ public class PhoneApp {
         callListener.addNewCall(call);
     }
 
+     /**
+     * Realiza uma chamada de voz/vídeo usando o CallListener
+     * @see Callable
+     * @see CallListener 
+     * @return void
+     */
     public void acceptCall() throws InterruptedException{
         if(getCallListener().getNewCalls().size() > 0) {
             CallListener listener = getCallListener();
@@ -53,6 +73,12 @@ public class PhoneApp {
         }
     }
 
+     /**
+     * Inicia uma chamada de voz/vídeo usando o CallListener
+     * @see Callable
+     * @see CallListener 
+     * @return void
+     */
     public void startCall() throws InterruptedException{
         if(getCallListener().getNewCalls().size() > 0) {
             CallListener listener = getCallListener();
@@ -65,27 +91,51 @@ public class PhoneApp {
         }
     }    
 
+    /**
+     * Encerra uma chamada usando o CallListener. 
+     * @return void
+     */
     public void endCall(){
         CallListener listener = getCallListener();
         Callable call = listener.getActiveCalls().get(0);
         call = listener.endCall(call);
         callHistory.add(call);
     }
-
+    //Você fuçãndo o código!!!
     //ADICIONE UM METODO voiceCall(Contact recipient) e videoCall(Contact recipient).
 
+    /**
+     * Adiciona um contato a lista de contatos.
+     * @param name String O nome do contato. 
+     * @param number String  O número do contato.
+     * @param type String O tipe de telefone (fixo, celular). 
+     * @return void
+     **/
     public void addContact(String name, String number, String type){
         contacts.add(new Contact(name, number, type));
     }
 
+    /**
+     * Retorna as chamadas perdidas. 
+     * @return List<Callable>
+     */
     public List<Callable> getLostCalls(){
         return callHistory.stream().filter(c -> !c.isStatus()).toList();
     }
 
+    /**
+     * Retorna as chamadas atendidas. 
+     * @return List<Callable>
+     */
     public List<Callable> getAcceptedCalls(){
         return callHistory.stream().filter(c -> c.isStatus()).toList();
     }
 
+    /**
+     * Retorna o tipo de telefone com base no numero, retonar "fixo" ou "celular". 
+     * @param number String 
+     * @return String
+     */
     public String getPhoneType(String number){
         if(number.length()== 14)return "Celular";
         else return "Fixo";

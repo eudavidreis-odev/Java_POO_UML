@@ -4,6 +4,11 @@ import java.util.Date;
 
 import PhoneApp.interfaces.Call;
 
+/**
+ * VoiceCall se extende de Callable, tem como função representar uma ligação de voz.
+ * @see Callable
+ * @see Call
+ */
 public class VoiceCall extends Callable{
 
     public VoiceCall(Contact caller, Contact recipient, double duration, Date date) {

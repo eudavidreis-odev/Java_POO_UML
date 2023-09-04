@@ -7,6 +7,12 @@ import java.util.concurrent.TimeUnit;
 import PhoneApp.objetos.Callable;
 import PhoneApp.objetos.VoiceMail;
 
+/**
+ * CallListener é o responsavel por receber e tratar as ligações,assim como iniciar uma 
+ * ligação e etc.
+ * @see Callable
+ * @see VoiceMail
+ */
 public class CallListener {
   private List<Callable> activeCalls;
   private List<Callable> newCalls;
@@ -24,6 +30,11 @@ public CallListener() {
 
 }
 
+/**
+ * Inicia uma chamada.
+ * @param call Callable 
+ * @return void
+ */
 public void startCall(Callable call) throws InterruptedException{
 
     if(call.getRecipient().getName()!= null)System.out.println("Ligando para "+call.getRecipient().getName());
@@ -35,7 +46,11 @@ public void startCall(Callable call) throws InterruptedException{
     call.start();
 }
 
-
+/**
+ * Aceita uma chamada. 
+ * @param call Callable
+ * @return void
+ */
 public void acceptCall(Callable call) throws InterruptedException{
     if(call.getCaller().getName()!= null)System.out.println("Recebendo ligação de "+call.getCaller().getName());
     else System.out.println("Recebendo ligação de "+call.getCaller().getNumber());
@@ -45,12 +60,21 @@ public void acceptCall(Callable call) throws InterruptedException{
     activeCalls.add(call);
     call.accept();
 }
-
+/**
+ * Recusa uma chamada. 
+ * @param call Callable
+ * @return void
+ */
 public void declineCall(Callable call){
     call.setStatus(false);
     call.end();
 }
 
+/**
+ * Termina uma chamada. 
+ * @param call Callable
+ * @return void
+ */
 public Callable endCall(Callable call){
     call.setStatus(true);
     activeCalls.remove(call);
@@ -60,10 +84,21 @@ public Callable endCall(Callable call){
     return call;
 }
 
+/**
+ * Adiciona uma nova chamada, recebido ou feita. As chamadas são adicionadas a newCalls<Callable>,
+ *  e assim podem ser atendidas, ou aguardar serem atendidas.  
+ * @param call Callable
+ * @return void
+ */
 public void addNewCall(Callable call){
     newCalls.add(call);
 }
 
+/**
+ * Retorna as mensagens da caixa postal com base no número da mensagem. 
+ * @param number String
+ * @retunr List<VoiceMail> 
+ */
 public List<VoiceMail> getVoiceMailByNumber(String number){
     System.out.println("Procurando mensagens do número: "+number);
     return voiceMails.stream().filter(vm -> (vm.getNumber().equals(number))).toList();

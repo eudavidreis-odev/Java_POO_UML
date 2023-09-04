@@ -1,5 +1,9 @@
 package PhoneApp.objetos;
 
+/**
+ * Contact representa um contato. Com os atributos nome = "name", número = "number" e tipo = "type" que descreve se o contato é 
+ * fixo ou de um celular.
+ */
 public class Contact {
     String name;
     String number;
