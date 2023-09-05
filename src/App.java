@@ -2,16 +2,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import MusicPlayer.managers.AudioBookManager;
-import MusicPlayer.managers.MusicManager;
-import MusicPlayer.managers.VideoManager;
-import PhoneApp.PhoneApp;
-import PhoneApp.objetos.Callable;
-import PhoneApp.objetos.Contact;
-import PhoneApp.objetos.VideoCall;
-import PhoneApp.objetos.VoiceCall;
-import PhoneApp.objetos.VoiceMail;
-import MusicPlayer.managers.PodcastManager;
+import musicPlayer.managers.AudioBookManager;
+import musicPlayer.managers.MusicManager;
+import musicPlayer.managers.PodcastManager;
+import musicPlayer.managers.VideoManager;
+import phoneApp.PhoneApp;
+import phoneApp.objetos.Callable;
+import phoneApp.objetos.Contact;
+import phoneApp.objetos.VideoCall;
+import phoneApp.objetos.VoiceCall;
+import phoneApp.objetos.VoiceMail;
 public class App {
     public static void main(String[] args) throws Exception {
         //executeMusicExamples();
