@@ -35,7 +35,7 @@ git clone https://github.com/EuDavidReis-ODev/Java_POO_UML.git
 ```
 3. Abra o projeto em sua IDE Java preferida (Eclipse, IntelliJ, etc.).
 
-4. Navegue até a classe principal do projeto, geralmente chamada de `Main` ou similar.
+4. Navegue até a classe principal do projeto, geralmente chamada de `App.java`.
 
 5. Execute a aplicação e utilize os managers disponíveis para interagir com as diferentes funcionalidades do iPhone simulado.
 
