@@ -2,6 +2,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import browser.WebBrowser;
 import musicPlayer.managers.AudioBookManager;
 import musicPlayer.managers.MusicManager;
 import musicPlayer.managers.PodcastManager;
@@ -19,6 +20,7 @@ public class App {
         //executePodcastExamples();
         //executeAudioBookExamples();
         //executeCallsExamples();
+        executeWebBrowserExamples();
     }
 
     public static void executeMusicExamples(){
@@ -235,4 +237,34 @@ public class App {
         }else System.out.println("Não existem mensagens do número (14)1100-2233 na caixa postal.");
     }
 
+    public static void executeWebBrowserExamples(){
+        WebBrowser browser = new WebBrowser();
+        
+        browser.openNewSite("www.google.com");
+
+        browser.openNewSite("www.youtube.com");
+        
+        browser.openNewSite("www.mrdev.tec.br");
+
+        browser.getOpenSites();
+
+        browser.closeSiteByIndex(1);
+
+        browser.getOpenSites();
+
+        browser.getBookmarks();
+
+        browser.addBookmar("www.google.com", "Google");
+
+        browser.addBookmar("www.stackoverflow.com", "StackOverflow");
+
+        browser.getBookmarks();
+
+        browser.removeBookmarkByName("Facebook");
+
+        browser.getBookmarks();
+
+        browser.openNewSite(browser.getBookmarks().get(2));
+
+    }
 }
