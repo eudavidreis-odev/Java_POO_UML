@@ -4,6 +4,12 @@ Esta funcionalidade do projeto é responsável por criar e gerenciar um navegado
 
 ## Classes
 
+## Diagrama de Classes
+Aqui uma representação UML das classes do projeto.
+
+![Diagrama de Classes](https://raw.githubusercontent.com/EuDavidReis-ODev/Java_POO_UML/main/src/assets/Diagrama_de_classes-WebBrowser.png)
+
+
 ### `Bookmark`
 
 - A classe `Bookmark` representa um favorito (bookmark) em um navegador da web.
