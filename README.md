@@ -46,7 +46,8 @@ Este projeto foi desenvolvido como parte do bootcamp da DIO e não tem fins educ
 
 ## Créditos
 
-Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS. O projeto aborda as aulas sobre UML e Java POO da DIO.
+Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS. O projeto aborda as aulas sobre UML e Java POO da DIO. 
+Quero mencionar e agradecer o @glysns, que é o autor do projeto original deste desafio.
 
 ## Contato
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lightblue?style=for-the-badge)](https://www.linkedin.com/in/eudavidreis-dev/) [![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://www.facebook.com/eudavidreis.dev)
