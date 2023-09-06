@@ -1,6 +1,6 @@
 # Funcionalidade de MusicPlayer
 
-Neste subdiretório, exploramos a funcionalidade de MusicPlayer, parte do projeto desenvolvido durante o Bootcamp DIO - JAVA + AWS (UML e Java POO) da empresa DIO (Digital Innovation One). A funcionalidade de MusicPlayer envolve a reprodução de diversos tipos de arquivos, como músicas, vídeos, podcasts e audiobooks.
+Neste subdiretório, exploramos a funcionalidade de MusicPlayer. A funcionalidade de MusicPlayer envolve a reprodução de diversos tipos de arquivos, como músicas, vídeos, podcasts e audiobooks.
 
 ## Diagrama de Classes UML
 

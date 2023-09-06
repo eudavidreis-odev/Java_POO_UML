@@ -1,6 +1,6 @@
 # Funcionalidade de Aparelho Telefônico
 
-Esta funcionalidade do projeto é responsável por gerenciar chamadas telefônicas, incluindo fazer ligações, atender chamadas e iniciar correio de voz. Ela faz uso das seguintes classes e interfaces:
+Esta funcionalidade do projeto é responsável por gerenciar chamadas telefônicas, incluindo fazer ligações, atender chamadas e iniciar correio de voz.
 
 ## Diagrama de Classes
 Aqui temos a representação UML do projeto·

@@ -35,19 +35,14 @@ git clone https://github.com/EuDavidReis-ODev/Java_POO_UML.git
 ```
 3. Abra o projeto em sua IDE Java preferida (Eclipse, IntelliJ, etc.).
 
-4. Navegue até a classe principal do projeto, geralmente chamada de `App.java`.
+4. Navegue até a classe principal do projeto, chamada de `App.java`.
 
-5. Execute a aplicação e utilize os managers disponíveis para interagir com as diferentes funcionalidades do iPhone simulado.
+5. Execute a aplicação e utilize os exêmplos disponíveis para interagir com as diferentes funcionalidades do iPhone simulado.
 
-## Contribuição
+## Créditos e Contribuição
 
-Este projeto foi desenvolvido como parte do bootcamp da DIO e não tem fins educativos. Se você gostaria de contribuir com melhorias, correções ou novas funcionalidades, sinta-se à vontade para enviar um pull request. Será um prazer receber contribuições da comunidade!
+Este projeto foi desenvolvido como parte do bootcamp da [DIO](https://www.dio.me/) e não tem fins educativos, e o projeto origem deste desafio é [Trilha Java Básico](https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/poo), criado por [Gleyson Sampaio](https://github.com/glysns). Se você gostaria de contribuir com melhorias, correções ou novas funcionalidades, sinta-se à vontade para enviar um pull request. Será um prazer receber contribuições da comunidade!
 
-
-## Créditos
-
-Este projeto foi desenvolvido por @DavidReisODev como parte do bootcamp de Java+AWS. O projeto aborda as aulas sobre UML e Java POO da DIO. 
-Quero mencionar e agradecer o @glysns, que é o autor do projeto original deste desafio.
 
 ## Contato
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-lightblue?style=for-the-badge)](https://www.linkedin.com/in/eudavidreis-dev/) [![Facebook](https://img.shields.io/badge/Facebook-blue?style=for-the-badge)](https://www.facebook.com/eudavidreis.dev)
